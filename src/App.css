@@ -6,3 +6,11 @@
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
 }
+
+.login {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  
+}

@@ -9,15 +9,16 @@ import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import ForgotPassword from './ForgotPassword'
 import UpdateProfile from './UpdateProfile'
 import Navbar from './Navbar/Navbar'
+import '../App.css'
 
 
 function App() {
   return (
     <Router>
-    <Navbar />
-    <Container className="d-flex align-items-center justify-content-center"
-      style={{ minHeight: "100vh" }}>
-      <div className="w-100" style={{ maxWidth: '450px' }}>
+    <div id="outer-container">
+    <Navbar pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }/>
+    
+      <div id='page-wrap' className="w-100" style={{ maxWidth: '450px' }}>
           <AuthProvider>
             <Switch>
               <PrivateRoute exact path="/" component={Homepage} />
@@ -28,7 +29,7 @@ function App() {
             </Switch>
           </AuthProvider>
       </div>
-    </Container>
+    </div>
     </Router>
   )
 }
