@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Component } from 'react'
 import Signup from './Signup'
 import Homepage from './Homepage'
 import Login from './Login'
@@ -8,16 +8,19 @@ import { AuthProvider } from '../contexts/AuthContext'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import ForgotPassword from './ForgotPassword'
 import UpdateProfile from './UpdateProfile'
-import Navbar from './Navbar/Navbar'
+import SideBar from './Sidebar/Sidebar'
+
+import Toolbar from './Toolbar/Toolbar'
 import '../App.css'
 
 
 function App() {
   return (
     <Router>
-    <div id="outer-container">
-    <Navbar pageWrapId={ "page-wrap" } outerContainerId={ "outer-container" }/>
-    
+    <Container className="d-flex align-items-center justify-content-center"
+      style={{ minHeight: "100%" }}>
+    <Toolbar />
+    <SideBar />
       <div id='page-wrap' className="w-100" style={{ maxWidth: '450px' }}>
           <AuthProvider>
             <Switch>
@@ -29,7 +32,7 @@ function App() {
             </Switch>
           </AuthProvider>
       </div>
-    </div>
+    </Container>
     </Router>
   )
 }

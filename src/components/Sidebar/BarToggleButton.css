@@ -1,0 +1,6 @@
+.toggle-button {
+    margin:10px;
+    background: transparent;
+    display: flex;
+    border: none;
+}

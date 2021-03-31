@@ -8,6 +8,7 @@ body {
   font-family: Roboto, Helvetica, Arial, sans-serif;
   background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgb(90, 147, 212) 25%);
   background-repeat: no-repeat;
+  height: 100%;
 }
 
 code {
